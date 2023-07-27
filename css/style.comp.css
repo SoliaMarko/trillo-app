@@ -159,6 +159,9 @@ body {
   list-style: none;
   margin-top: 3.5rem;
 }
+.side-nav > * {
+  user-select: none;
+}
 @media only screen and (max-width: 56.25em) {
   .side-nav {
     margin-top: 0;
@@ -237,6 +240,7 @@ body {
   color: var(--color-grey-light-4);
   text-align: center;
   padding: 2.5rem;
+  user-select: none;
 }
 @media only screen and (max-width: 56.25em) {
   .legal {
@@ -246,6 +250,9 @@ body {
 
 .gallery {
   display: flex;
+}
+.gallery > * {
+  user-select: none;
 }
 .gallery__photo {
   width: 100%;
@@ -302,6 +309,9 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.overview__rating > * {
+  user-select: none;
 }
 @media only screen and (max-width: 37.5em) {
   .overview__rating {
@@ -407,6 +417,9 @@ body {
   display: flex;
   align-items: center;
 }
+.recommend > * {
+  user-select: none;
+}
 .recommend__count {
   margin-right: auto;
 }
@@ -447,6 +460,9 @@ body {
   display: flex;
   align-items: center;
 }
+.review__user > * {
+  user-select: none;
+}
 .review__photo {
   height: 4.5rem;
   width: 4.5rem;
@@ -486,6 +502,9 @@ body {
 .cta {
   padding: 3.5rem 0;
   text-align: center;
+}
+.cta > * {
+  user-select: none;
 }
 @media only screen and (max-width: 56.25em) {
   .cta {
@@ -561,6 +580,9 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+.header > * {
+  user-select: none;
+}
 @media only screen and (max-width: 31.25em) {
   .header {
     flex-wrap: wrap;
@@ -631,6 +653,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.user-reviews .btn-inline {
+  user-select: none;
 }
 
 /*# sourceMappingURL=style.comp.css.map */

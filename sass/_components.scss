@@ -138,6 +138,10 @@
   list-style: none;
   margin-top: 3.5rem;
 
+  & > * {
+    user-select: none;
+  }
+
   @media only screen and (max-width: base.$bp-medium) {
     margin-top: 0;
     display: flex;
@@ -229,6 +233,7 @@
   color: var(--color-grey-light-4);
   text-align: center;
   padding: 2.5rem;
+  user-select: none;
 
   @media only screen and (max-width: base.$bp-medium) {
     display: none;
@@ -240,6 +245,11 @@
 
 .gallery {
   display: flex;
+
+  & > * {
+    user-select: none;
+  }
+
   &__photo {
     width: 100%;
     display: block;
@@ -304,6 +314,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    & > * {
+      user-select: none;
+    }
 
     @media only screen and (max-width: base.$bp-small) {
       padding: 0 1.5rem;
@@ -436,6 +450,10 @@
   display: flex;
   align-items: center;
 
+  & > * {
+    user-select: none;
+  }
+
   &__count {
     margin-right: auto;
   }
@@ -482,6 +500,10 @@
   &__user {
     display: flex;
     align-items: center;
+
+    & > * {
+      user-select: none;
+    }
   }
 
   &__photo {
@@ -532,6 +554,10 @@
 .cta {
   padding: 3.5rem 0;
   text-align: center;
+
+  & > * {
+    user-select: none;
+  }
 
   @media only screen and (max-width: base.$bp-medium) {
     padding: 2.5rem 0;
