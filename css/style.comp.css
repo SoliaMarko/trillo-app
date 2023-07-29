@@ -110,6 +110,7 @@ body {
   align-self: stretch;
   display: flex;
   align-items: stretch;
+  position: relative;
 }
 .user-nav > * {
   padding: 0 2rem;
@@ -146,6 +147,56 @@ body {
   height: 3.75rem;
   border-radius: 50%;
   margin-right: 1rem;
+}
+
+.user-options {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  padding: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+.user-options:hover {
+  background-color: inherit;
+}
+.user-options__list {
+  display: flex;
+  flex-direction: column;
+}
+.user-options__item {
+  list-style: none;
+}
+.user-options__link:link, .user-options__link:visited {
+  background-color: var(--color-grey-light-1);
+  color: currentColor;
+  text-decoration: none;
+  padding: 1.2rem 3rem 1.2rem 2rem;
+  display: flex;
+  align-items: center;
+}
+.user-options__link--logout:link, .user-options__link--logout:visited {
+  color: var(--color-primary-light);
+}
+.user-options__link:hover, .user-options__link:active {
+  background-color: var(--color-grey-light-3);
+  color: var(--color-primary);
+}
+.user-options__icon {
+  height: 1.75rem;
+  width: 1.75rem;
+  fill: currentColor;
+  margin-right: 1.4rem;
+}
+.user-options__text {
+  font-weight: 500;
+}
+
+.user-nav__user:hover > .user-options {
+  opacity: 1;
+  visibility: visible;
 }
 
 .sidebar {
@@ -404,11 +455,18 @@ body {
   height: 1rem;
   width: 1rem;
   margin-right: 0.7rem;
-  background-color: var(--color-primary);
-  -webkit-mask-image: url("../img/chevron-thin-right.svg");
-  -webkit-mask-size: cover;
-  mask-image: url("../img/chevron-thin-right.svg");
-  mask-size: cover;
+  background-image: url("../img/chevron-thin-right.svg");
+  background-size: cover;
+}
+@supports (-webkit-mask-image: url()) or (mask-image: url()) {
+  .list__item::before {
+    background-color: var(--color-primary);
+    -webkit-mask-image: url("../img/chevron-thin-right.svg");
+    -webkit-mask-size: cover;
+    mask-image: url("../img/chevron-thin-right.svg");
+    mask-size: cover;
+    background-image: none;
+  }
 }
 
 .recommend {
