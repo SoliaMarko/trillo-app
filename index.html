@@ -12,6 +12,8 @@
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 
     <title>trillo &mdash; All-in-one booking app</title>
+
+    <script defer type="module" src="./scripts/main.js"></script>
   </head>
   <body>
     <div class="container">
@@ -145,7 +147,17 @@
             </li>
           </ul>
 
-          <div class="legal">&copy; 2017 by trillo. All rights reserved.</div>
+          <div class="legal">
+            &copy; 2023 by
+            <a class="legal__link" href="https://linkedin.com/in/solomiia-marko"
+              >Solia Marko</a
+            >. View source code on my
+            <a
+              class="legal__link"
+              href="https://github.com/SoliaMarko/trillo-app"
+              >GitHub</a
+            >.
+          </div>
         </nav>
 
         <main class="hotel-view">
@@ -156,6 +168,9 @@
                 alt="Photo of hotel 1"
                 class="gallery__photo"
               />
+              <svg class="gallery__icon-fullscreen">
+                <use href="img/sprite-3.svg#icon-fullscreen"></use>
+              </svg>
             </figure>
             <figure class="gallery__item">
               <img
@@ -163,6 +178,9 @@
                 alt="Photo of hotel 2"
                 class="gallery__photo"
               />
+              <svg class="gallery__icon-fullscreen">
+                <use href="img/sprite-3.svg#icon-fullscreen"></use>
+              </svg>
             </figure>
             <figure class="gallery__item">
               <img
@@ -170,7 +188,17 @@
                 alt="Photo of hotel 3"
                 class="gallery__photo"
               />
+              <svg class="gallery__icon-fullscreen">
+                <use href="img/sprite-3.svg#icon-fullscreen"></use>
+              </svg>
             </figure>
+
+            <div class="modal">
+              <svg class="modal__icon-close">
+                <use href="img/sprite-3.svg#icon-disabled_by_default"></use>
+              </svg>
+              <img alt="Photo of hotel" class="modal__content" />
+            </div>
           </div>
 
           <div class="overview">

@@ -59,3 +59,22 @@ body {
 
   min-height: 100vh;
 }
+
+///////////////////////////////////////
+// SCROLLBAR
+
+::-webkit-scrollbar {
+  width: 1.6rem;
+}
+
+::-webkit-scrollbar-track {
+  background: hsla(343, 82%, 55%, 0.418);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8a1c44;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #77193a;
+}

@@ -47,6 +47,22 @@ body {
   min-height: 100vh;
 }
 
+::-webkit-scrollbar {
+  width: 1.6rem;
+}
+
+::-webkit-scrollbar-track {
+  background: hsla(343, 82%, 55%, 0.418);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8a1c44;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #77193a;
+}
+
 .logo {
   height: 3.25rem;
   margin-left: 2rem;
@@ -156,6 +172,7 @@ body {
   padding: 0;
   visibility: hidden;
   opacity: 0;
+  z-index: 1000;
   transition: visibility 0s, opacity 0.5s linear;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
@@ -293,6 +310,12 @@ body {
   padding: 2.5rem;
   user-select: none;
 }
+.legal__link:link, .legal__link:visited {
+  color: inherit;
+}
+.legal__link:hover, .legal__link:active {
+  color: var(--color-primary);
+}
 @media only screen and (max-width: 56.25em) {
   .legal {
     display: none;
@@ -305,11 +328,109 @@ body {
 .gallery > * {
   user-select: none;
 }
+.gallery__item {
+  position: relative;
+}
+.gallery__item:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+.gallery__item:hover > .gallery__icon-fullscreen {
+  opacity: 1;
+}
 .gallery__photo {
   width: 100%;
   display: block;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+.gallery__icon-fullscreen {
+  opacity: 0;
+  width: 2.6rem;
+  height: 2.6rem;
+  fill: var(--color-grey-dark-3);
+  position: absolute;
+  bottom: 0.4rem;
+  right: 0.4rem;
+}
+.gallery__icon-fullscreen:hover {
+  fill: var(--color-grey-dark-4);
 }
 
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+  align-items: center;
+  justify-content: center;
+}
+.modal__icon-close {
+  position: absolute;
+  top: 4rem;
+  right: 4rem;
+  width: 5rem;
+  height: 5rem;
+  fill: var(--color-grey-light-3);
+  cursor: pointer;
+  animation-name: appear;
+  animation-duration: 1.2s;
+}
+.modal__icon-close:hover {
+  fill: var(--color-primary);
+}
+.modal__content {
+  display: flex;
+  width: 80%;
+  max-width: 1400px;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s 0.1s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+@media only screen and (max-width: 56.25em) {
+  .modal__content {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .modal__content {
+    width: 96%;
+  }
+}
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .overview {
   border-bottom: var(--line);
   display: flex;
