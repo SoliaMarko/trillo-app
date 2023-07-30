@@ -10,12 +10,10 @@ function openModal(e) {
   if (e.target.tagName !== "IMG") return;
   modal.style.display = "flex";
   modalImg.src = e.target.src;
-  body.style.overflow = "hidden";
 }
 
 function closeModal() {
   modal.style.display = "none";
-  body.style.overflow = "visible";
 }
 
 gallery.addEventListener("click", openModal);
