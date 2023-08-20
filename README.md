@@ -35,15 +35,19 @@ The website is fully responsive thanks to `flexbox`.
 
 This is achieved by placing a `::before` pseudo element right on top of the button anchor text. This pseudo element is initially at the far left, when hovered, it expands and fills it's parent's full width.
 
-![nav items animations](./README_assets/nav.gif "nav items animations")
+<p align="center" width="100%">
+    <img alt="nav items animations" src="./README_assets/nav.gif"> 
+</p>
 
-#### 3. Hover Menues:
+#### 3. Hover Menue:
 
 ---
 
-Hover menues are created with a `div` that is positioned `absolute`, and appears when hovered.
+Hover menue is created with a `div` that is positioned `absolute`, and appears when hovered.
 
-![user nav menu](./README_assets/user-nav.gif "user nav menu")
+<p align="center" width="100%">
+    <img alt="user nav menu" src="./README_assets/user-nav.gif"> 
+</p>
 
 #### 4. Modal Images:
 
