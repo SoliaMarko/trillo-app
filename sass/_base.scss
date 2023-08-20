@@ -68,13 +68,13 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: hsla(343, 82%, 55%, 0.418);
-}
-
-::-webkit-scrollbar-thumb {
   background: #8a1c44;
 }
 
+::-webkit-scrollbar-thumb {
+  background: hsl(343, 100%, 80%);
+}
+
 ::-webkit-scrollbar-thumb:hover {
-  background: #77193a;
+  background: hsl(343, 96%, 72%);
 }

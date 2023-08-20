@@ -78,7 +78,7 @@ closeBtn.addEventListener("click", closeModal);
 - **change color of svg**, set directly in CSS as **background-image**?
 
 ```
-background-color: yellow;
+background-color: #eb2f64;
 -webkit-mask-image: url(path);
 -webkit-mask-size: cover;
 ```
