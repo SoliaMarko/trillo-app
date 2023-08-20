@@ -1,3 +1,13 @@
-## Trillo App
+# [Trillo Hotel Booking - Responsive Layout](https://soliamarko.github.io/trillo-app/ "Trillo Hotel Booking - Responsive Layout")
+`Live:` https://soliamarko.github.io/trillo-app/
 
-The layout for this app is made within the Udemy course: "Advanced CSS and Sass: Flexbox, Grid, Animations and More!", Jonas Schmedtmann.
+A mockup hotel booking site. Completed with HTML & CSS (SASS).
+
+## Features
+- Fully responsive
+- HTML and SASS only
+- Uses **7-1 sass pattern** & **BEM**.
+
+###  Overview
+----
+Designed by Jonas Schmedtmann, implemented by me.
